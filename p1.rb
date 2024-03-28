@@ -1,8 +1,6 @@
 require 'httparty'
 
-username = 'KonradIT'
-url = "https://api.github.com/users/#{username}/repos"
-response = HTTParty.get(url)
+response = HTTParty.get("https://api.github.com/users/KonradIT/repos")
 
 if response.code == 200
   repositories = JSON.parse(response.body)
